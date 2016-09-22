@@ -13,7 +13,6 @@ angular.module('socially', [
         return Parties.find({});
       }
     });
-    
 })
 // teste Vinícius -  Sem utilizar injeção de dependência
 .controller('ControllerVinicius', ["$scope", function ($scope) {
