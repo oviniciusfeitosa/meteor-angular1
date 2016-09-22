@@ -1,2 +1,5 @@
 # meteor-angular1
-Doing short tutorial [from](http://www.angular-meteor.com/), using Meter and AngularJS 1
+Execução do [tutorial](http://www.angular-meteor.com/), utilizando Meteor Meter e AngularJS 1
+
+## Acesso rápido :
+- [Mongo Command Line](https://github.com/vinnyfs89/meteor-angular1/tree/master/server)
