@@ -6,6 +6,11 @@ Acessando uma nova instância do terminal dentro do container que está rodando 
 ```
 docker exec -it ff /bin/bash
 ```
+
+```
+meteor mongo
+```
+
 Executando comando dentro do Mongo Commando Line:
 
 ```bash
