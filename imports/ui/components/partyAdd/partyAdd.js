@@ -10,7 +10,12 @@ class PartyAdd {
 	}
 
 	submit() {
-		console.log('submit :', this.party);
+		Parties.insert(this.party);
+    	this.reset();
+	}
+
+	reset() {
+		this.party = {};
 	}
 }
  
