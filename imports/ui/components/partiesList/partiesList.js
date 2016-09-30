@@ -2,6 +2,8 @@ import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
 import template from './partiesList.html';
+import { Parties } from '../../../api/parties';
+import { name as PartyAdd } from '../partyAdd/partyAdd';
 
 // Agora está em ES6 - EcmaScript 6 e sendo carregado dinamicamente via LazyLoad
 class PartiesList {
@@ -22,9 +24,10 @@ const name = 'partiesList';
  
 // create a module
 export default angular.module(name, [
-  angularMeteor
+  angularMeteor,
+  PartyAdd
 ]).component(name, {
-  templateUrl: template
+  template,
   controllerAs: name,
   controller: PartiesList
 });
