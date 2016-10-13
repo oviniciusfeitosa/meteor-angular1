@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="316df682-c9be-4ba6-9693-1f71c2279f9d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/socially/socially.html" afterPath="$PROJECT_DIR$/imports/ui/components/socially/socially.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/socially/socially.js" afterPath="$PROJECT_DIR$/imports/ui/components/socially/socially.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/api/parties.js" afterPath="$PROJECT_DIR$/imports/api/parties.js" />
     </list>
     <ignored path="meteor-angular1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,18 +23,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="navigation.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/components/navigation/navigation.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="partiesList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/partiesList/partiesList.html">
           <provider selected="true" editor-type-id="text-editor">
@@ -93,11 +79,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="socially.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="socially.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/socially/socially.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+            <state relative-caret-position="90">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parties.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/api/parties.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -162,6 +158,7 @@
         <option value="$PROJECT_DIR$/imports/ui/components/partyDetails/partyDetails.html" />
         <option value="$PROJECT_DIR$/imports/ui/components/socially/socially.js" />
         <option value="$PROJECT_DIR$/imports/ui/components/socially/socially.html" />
+        <option value="$PROJECT_DIR$/imports/api/parties.js" />
       </list>
     </option>
   </component>
@@ -426,12 +423,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1475027571830</updated>
-      <workItem from="1476379435135" duration="8168000" />
+      <workItem from="1476379435135" duration="8502000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8168000" />
+    <option name="totallyTimeSpent" value="8502000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="81" width="1600" height="873" extended-state="6" />
@@ -483,14 +480,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/collections/parties.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/api/parties.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -608,8 +597,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/socially/socially.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/api/parties.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
           <folding />
         </state>
       </provider>
