@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { name as PartyAdd } from '../partyAdd';
 import { Parties } from '../../../../api/parties';
 import 'angular-mocks';
