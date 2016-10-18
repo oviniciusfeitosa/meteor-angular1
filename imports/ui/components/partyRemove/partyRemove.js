@@ -5,9 +5,9 @@ import template from './partyRemove.html';
 import { Parties } from '../../../api/parties/index';
 
 class PartyRemove {
+
 	remove() {
 		if(this.party) {
-			console.log(this.party);
 			Parties.remove(this.party._id);
 		}
 	}
@@ -20,7 +20,7 @@ export default angular.module(name, [
 	angularMeteor
 ]).component(name, {
 	template,
-	binding: {
+	bindings: {
 		party: '<'
 	},
 	controllerAs: name,

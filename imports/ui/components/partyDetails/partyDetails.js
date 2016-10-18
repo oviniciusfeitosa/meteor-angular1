@@ -1,6 +1,8 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 
+import { Meteor } from 'meteor/meteor';
+
 import template from './partyDetails.html';
 import { Parties } from '../../../api/parties/index';
 
@@ -62,6 +64,15 @@ function config($stateProvider) {
 
     $stateProvider.state('partyDetails', {
         url: '/parties/:partyId',
-        template: '<party-details></party-details>'
+        template: '<party-details></party-details>',
+        resolve: {
+            currentUser($q) {
+                if (Meteor.userId() === null) {
+                    return $q.reject('AUTH_REQUIRED');
+                } else {
+                    return $q.resolve();
+                }
+            }
+        }
     });
 }
