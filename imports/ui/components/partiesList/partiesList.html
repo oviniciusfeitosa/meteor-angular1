@@ -1,6 +1,6 @@
 <party-add></party-add>
 <ul>
-    <li ng-repeat="party in partiesList.parties">
+    <li dir-paginate="party in partiesList.parties | itemsPerPage: partiesList.perPage" total-items="partiesList.partiesCount">
         <a ui-sref="partyDetails({ partyId: party._id })">
             {{party.name}}
         </a>
@@ -8,3 +8,5 @@
         <party-remove party="party"></party-remove>
     </li>
 </ul>
+
+<dir-pagination-controls on-page-change="partiesList.pageChanged(newPageNumber)"></dir-pagination-controls>
