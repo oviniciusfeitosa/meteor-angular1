@@ -10,6 +10,7 @@ import {Parties} from '../../../api/parties/index';
 import { name as PartiesSort } from '../partiesSort/partiesSort';
 import {name as PartyAdd} from '../partyAdd/partyAdd';
 import {name as PartyRemove} from '../partyRemove/partyRemove';
+import { name as PartyCreator } from '../partyCreator/partyCreator';
 
 // Agora está em ES6 - EcmaScript 6 e sendo carregado dinamicamente via LazyLoad
 class PartiesList {
@@ -62,7 +63,8 @@ export default angular.module(name, [
     utilsPagination,
     PartiesSort,
     PartyAdd,
-    PartyRemove
+    PartyRemove,
+    PartyCreator
 ]).component(name, {
     template,
     controllerAs: name,
