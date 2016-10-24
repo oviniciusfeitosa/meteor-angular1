@@ -1,4 +1,9 @@
 <party-add></party-add>
+
+<input type="search" ng-model="partiesList.searchText" placeholder="Search" />
+
+<parties-sort on-change="partiesList.sortChanged(sort)" property="name" order="1"></parties-sort>
+
 <ul>
     <li dir-paginate="party in partiesList.parties | itemsPerPage: partiesList.perPage" total-items="partiesList.partiesCount">
         <a ui-sref="partyDetails({ partyId: party._id })">
