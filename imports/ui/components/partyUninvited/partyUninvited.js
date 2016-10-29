@@ -8,6 +8,7 @@ import { name as UninvitedFilter } from '../../filters/uninvitedFilter';
 import { name as DisplayNameFilter } from '../../filters/displayNameFilter';
 
 class PartyUninvited {
+
     constructor($scope) {
         'ngInject';
 
@@ -18,6 +19,18 @@ class PartyUninvited {
                 return Meteor.users.find({});
             }
         });
+    }
+
+    invite(user) {
+        Meteor.call('invite', this.party._id, user._id,
+            (error) => {
+                if (error) {
+                    console.log('Oops, unable to invite!');
+                } else {
+                    console.log('Invited!');
+                }
+            }
+        );
     }
 }
 
