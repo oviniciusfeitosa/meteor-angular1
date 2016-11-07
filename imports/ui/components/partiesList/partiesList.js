@@ -11,6 +11,9 @@ import { name as PartiesSort } from '../partiesSort/partiesSort';
 import {name as PartyAdd} from '../partyAdd/partyAdd';
 import {name as PartyRemove} from '../partyRemove/partyRemove';
 import { name as PartyCreator } from '../partyCreator/partyCreator';
+import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
+import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
+import { name as PartyUnanswered } from '../partyUnanswered/partyUnanswered';
 
 // Agora está em ES6 - EcmaScript 6 e sendo carregado dinamicamente via LazyLoad
 class PartiesList {
@@ -31,6 +34,8 @@ class PartiesList {
             skip: parseInt((this.getReactively('page') - 1) * this.perPage ),
             sort: this.getReactively('sort')
         }, this.getReactively('searchText')]);
+
+        this.subscribe('users');
 
         this.helpers({
             parties() {
@@ -64,7 +69,10 @@ export default angular.module(name, [
     PartiesSort,
     PartyAdd,
     PartyRemove,
-    PartyCreator
+    PartyCreator,
+    PartyRsvp,
+    PartyRsvpsList,
+    PartyUnanswered
 ]).component(name, {
     template,
     controllerAs: name,
