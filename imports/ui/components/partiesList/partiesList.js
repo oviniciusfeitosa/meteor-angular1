@@ -11,9 +11,6 @@ import { name as PartiesSort } from '../partiesSort/partiesSort';
 import {name as PartyAdd} from '../partyAdd/partyAdd';
 import {name as PartyRemove} from '../partyRemove/partyRemove';
 import { name as PartyCreator } from '../partyCreator/partyCreator';
-import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
-import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
-import { name as PartyUnanswered } from '../partyUnanswered/partyUnanswered';
 
 // Agora está em ES6 - EcmaScript 6 e sendo carregado dinamicamente via LazyLoad
 class PartiesList {
@@ -35,8 +32,6 @@ class PartiesList {
             sort: this.getReactively('sort')
         }, this.getReactively('searchText')]);
 
-        this.subscribe('users');
-
         this.helpers({
             parties() {
                 return Parties.find({}, {
@@ -45,6 +40,12 @@ class PartiesList {
             },
             partiesCount() {
                 return Counts.get('numberOfParties');
+            },
+            isLoggedIn() {
+                return !!Meteor.userId();
+            },
+            currentUserId() {
+                return Meteor.userId();
             }
         });
     }
@@ -55,6 +56,10 @@ class PartiesList {
 
     sortChanged(sort) {
         this.sort = sort;
+    }
+
+    isOwner(party) {
+        return this.isLoggedIn && party.owner === this.currentUserId;
     }
 
 }
@@ -69,10 +74,7 @@ export default angular.module(name, [
     PartiesSort,
     PartyAdd,
     PartyRemove,
-    PartyCreator,
-    PartyRsvp,
-    PartyRsvpsList,
-    PartyUnanswered
+    PartyCreator
 ]).component(name, {
     template,
     controllerAs: name,
