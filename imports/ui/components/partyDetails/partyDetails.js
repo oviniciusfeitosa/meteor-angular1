@@ -6,6 +6,7 @@ import { Meteor } from 'meteor/meteor';
 import template from './partyDetails.html';
 import { Parties } from '../../../api/parties/index';
 import { name as PartyUninvited } from '../partyUninvited/partyUninvited';
+import { name as PartyMap } from '../partyMap/partyMap';
 
 class PartyDetails {
     constructor($stateParams, $scope, $reactive) {
@@ -55,7 +56,8 @@ class PartyDetails {
             $set: {
                 name: this.party.name,
                 description: this.party.description,
-                public: this.party.public
+                public: this.party.public,
+                location: this.party.location
             }
         }, (error) => {
             if (error) {
@@ -72,7 +74,8 @@ const name = 'partyDetails';
 export default angular.module(name, [
     angularMeteor,
     uiRouter,
-    PartyUninvited
+    PartyUninvited,
+    PartyMap
 ]).component(name, {
     template,
     controllerAs: name,
