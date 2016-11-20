@@ -1,4 +1,6 @@
 import angular from 'angular';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import { Meteor } from 'meteor/meteor';
 import { name as Socially } from '../imports/ui/components/socially/socially';
 

@@ -9,9 +9,11 @@ import template from './partiesList.html';
 import {Parties} from '../../../api/parties/index';
 import { name as PartiesSort } from '../partiesSort/partiesSort';
 import { name as PartiesMap } from '../partiesMap/partiesMap';
-import {name as PartyAdd} from '../partyAdd/partyAdd';
-import {name as PartyRemove} from '../partyRemove/partyRemove';
+import { name as PartyAdd} from '../partyAdd/partyAdd';
+import { name as PartyRemove} from '../partyRemove/partyRemove';
 import { name as PartyCreator } from '../partyCreator/partyCreator';
+import { name as PartyRsvp } from '../partyRsvp/partyRsvp';
+import { name as PartyRsvpsList } from '../partyRsvpsList/partyRsvpsList';
 
 // Agora está em ES6 - EcmaScript 6 e sendo carregado dinamicamente via LazyLoad
 class PartiesList {
@@ -76,7 +78,9 @@ export default angular.module(name, [
     PartiesMap,
     PartyAdd,
     PartyRemove,
-    PartyCreator
+    PartyCreator,
+    PartyRsvp,
+    PartyRsvpsList
 ]).component(name, {
     template,
     controllerAs: name,
